@@ -2496,3 +2496,426 @@ a:hover.back-to-top {
                 0 0 75px rgba(255, 179, 0, 0.2);
 }
 
+
+/* new css */
+/* end of min-width width 1200px */
+
+/* --- Modern Takeaways/Cards Section --- */
+.cards {
+    padding: 6rem 0;
+    background: radial-gradient(ellipse at 50% 50%, #1a1a2e 0%, #0c0a18 100%);
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.cards::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle at 20% 30%, rgba(255, 179, 0, 0.1) 0%, transparent 25%),
+                      radial-gradient(circle at 80% 70%, rgba(80, 70, 220, 0.1) 0%, transparent 25%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cards .container {
+    position: relative;
+    z-index: 2;
+}
+
+.cards h2 {
+    font-weight: 800;
+    font-size: 3rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.cards .p-heading {
+    color: #b0b0c0;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+    line-height: 1.8;
+}
+
+.cards .card {
+    background: rgba(30, 28, 58, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 179, 0, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    height: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cards .card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 179, 0, 0.5);
+}
+
+.cards .card-image {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 2rem auto;
+    background: linear-gradient(135deg, rgba(255, 179, 0, 0.2), rgba(255, 179, 0, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.cards .card-image::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #FFB300, #FF8F00);
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+.cards .fas,
+.cards .far {
+    color: #FFB300;
+    font-size: 2.5rem;
+}
+
+.cards .card-title {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.cards .card-body p {
+    color: #b0b0c0;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Modern Date Section --- */
+.basic-5 {
+    padding: 6rem 0;
+    background: radial-gradient(ellipse at 50% 50%, #1a1a2e 0%, #0c0a18 100%);
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.basic-5 .text-container {
+    background: rgba(30, 28, 58, 0.7);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 179, 0, 0.3);
+    border-radius: 24px;
+    padding: 4rem 3rem;
+    text-align: center;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 2;
+}
+
+.basic-5 .text-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 179, 0, 0.05), transparent);
+    animation: shimmer 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.basic-5 h2 {
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.basic-5 h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #FFB300, #FF8F00);
+    border-radius: 3px;
+}
+
+.basic-5 p {
+    color: #b0b0c0;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+}
+
+.basic-5 .submit {
+    margin-bottom: 2rem;
+}
+
+.basic-5 .btn-solid-lg {
+    background: linear-gradient(135deg, #FFB300, #FF8F00);
+    border: 2px solid transparent;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    color: #0c0a18;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 5px 20px rgba(255, 179, 0, 0.3);
+}
+
+.basic-5 .btn-solid-lg:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 179, 0, 0.5);
+    color: #0c0a18;
+}
+
+.basic-5 li.media {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    border-left: 4px solid #FFB300;
+    text-align: left;
+}
+
+.basic-5 li.media:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Modern Contact Section --- */
+.form-3 {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #FFB300 0%, #FF8F00 100%);
+    font-family: 'Inter', sans-serif;
+    position: relative;
+}
+
+.form-3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 179, 0, 0.9), rgba(255, 143, 0, 0.9));
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='rgba(255,255,255,0.05)' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='m0 40l40-40h-40z'/%3E%3Cpath d='m0 40l40-40h-40z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.form-3 .text-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-3 h2 {
+    color: #0c0a18;
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-3 h3 {
+    color: #0c0a18;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.form-3 p {
+    color: #2c1810;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.form-3 .list-unstyled li.media {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    border-left: 4px solid #0c0a18;
+}
+
+.form-3 .fas {
+    color: #0c0a18;
+    width: 20px;
+    text-align: center;
+}
+
+/* Contact Form Styling */
+.form-3 form {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-3 .form-control-input,
+.form-3 .form-control-textarea {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.form-3 .form-control-input:focus,
+.form-3 .form-control-textarea:focus {
+    background: rgba(255, 255, 255, 1);
+    border-color: #0c0a18;
+    box-shadow: 0 0 10px rgba(12, 10, 24, 0.2);
+}
+
+.form-3 .form-control-submit-button {
+    background: linear-gradient(135deg, #0c0a18, #1a1a2e);
+    border: 2px solid #0c0a18;
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 5px 15px rgba(12, 10, 24, 0.3);
+}
+
+.form-3 .form-control-submit-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(12, 10, 24, 0.5);
+    background: linear-gradient(135deg, #1a1a2e, #0c0a18);
+}
+
+/* --- Modern Footer --- */
+.footer {
+    padding: 4rem 0 2rem 0;
+    background: linear-gradient(135deg, #0c0a18 0%, #1a1a2e 100%);
+    font-family: 'Inter', sans-serif;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle at 20% 80%, rgba(255, 179, 0, 0.1) 0%, transparent 25%);
+    pointer-events: none;
+}
+
+.footer .footer-col {
+    background: rgba(30, 28, 58, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 179, 0, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.footer .footer-col:hover {
+    border-color: rgba(255, 179, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.footer h5 {
+    color: #FFB300;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.footer h5::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, #FFB300, #FF8F00);
+    border-radius: 2px;
+}
+
+.footer .list-unstyled li.media {
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.footer .list-unstyled li.media:hover {
+    transform: translateX(5px);
+}
+
+.footer .fas {
+    color: #FFB300;
+    margin-right: 0.75rem;
+    width: 16px;
+    text-align: center;
+}
+
+.footer a {
+    color: #b0b0c0;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    color: #FFB300;
+    text-decoration: none;
+}
+
+/* --- Copyright Section --- */
+.copyright {
+    background: #0c0a18;
+    border-top: 1px solid rgba(255, 179, 0, 0.2);
+    padding: 1.5rem 0;
+}
+
+.copyright .p-small {
+    color: #888;
+    text-align: center;
+    margin: 0;
+}
+
+.copyright a {
+    color: #FFB300;
+    transition: all 0.3s ease;
+}
+
+.copyright a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}

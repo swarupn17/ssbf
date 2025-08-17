@@ -4,345 +4,320 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Landing page template built with HTML and Bootstrap 4 for presenting training courses, classes, workshops and for convincing visitors to register using the form.">
+    <meta name="description" content="Details for the International Conference on Behavioural Finance (ICBF) at IIIT Allahabad.">
     <meta name="author" content="Inovatik">
 
-    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-	<meta property="og:site_name" content="" /> <!-- website name -->
-	<meta property="og:site" content="" /> <!-- website link -->
-	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
-	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta property="og:site_name" content="SSBF" />
+	<meta property="og:site" content="" />
+	<meta property="og:title" content="International Conference | SSBF"/>
+	<meta property="og:description" content="Join the International Conference on Behavioural Finance (ICBF) on 1st – 5th December 2025 at IIIT Allahabad." />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
 	<meta property="og:type" content="article" />
 
-    <!-- Website Title -->
     <title>International Conference | SSBF</title>
     
-    <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/fontawesome-all.css" rel="stylesheet">
     <link href="css/swiper.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
 	
-	<!-- Favicon  -->
-    <link rel="icon" href="https://ssbf.iiita.ac.in/images/favicon.png">
+	<link rel="icon" href="https://ssbf.iiita.ac.in/images/favicon.png">
+
+    <style>
+        body {
+            background-color: #0c0a18;
+        }
+        .content-section {
+            padding: 6rem 0;
+            background: radial-gradient(ellipse at 50% 50%, #1a1a2e 0%, #0c0a18 100%);
+            font-family: 'Inter', sans-serif;
+            color: antiquewhite;
+        }
+        .info-card {
+            background: rgba(30, 28, 58, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 179, 0, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        .info-card:hover {
+            border-color: rgba(255, 179, 0, 0.4);
+        }
+        .info-card h2, .info-card h3 {
+            color: #ffffff;
+            font-weight: 700;
+        }
+        .info-card h5 {
+            color: #FFB300;
+        }
+        .info-card p {
+            line-height: 1.8;
+        }
+        .info-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .info-card ul li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+        }
+        .info-card ul li::before {
+            content: "\f105"; /* Font Awesome Chevron Right */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #FFB300;
+            margin-right: 1rem;
+            margin-top: 0.2rem;
+        }
+        .cta-card {
+            background: rgba(20, 18, 38, 0.6);
+            backdrop-filter: blur(25px);
+            border-radius: 24px;
+            padding: 3rem;
+            text-align: center;
+        }
+    </style>
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
     
-   <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-
-    <!-- Logo -->
-    <a class="navbar-brand logo-image" href="index.html"
-        style="color:#FFB300; font-size:2em;font-family: 'Acme', sans-serif; text-decoration: none;">
-        <img src="images/iiita.gif" class="main-logo"><span> </span>IIIT ALLAHABAD
-    </a>
-
-    <!-- Mobile Menu Toggle -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-awesome fas fa-bars"></span>
-        <span class="navbar-toggler-awesome fas fa-times"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav ml-auto">
-
-            <!-- Home -->
-            <li class="nav-item">
-                <a class="nav-link page-scroll" href="index.html">HOME</a>
-            </li>
-
-            <!-- About Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="#" id="aboutDropdown" role="button"
-                    aria-haspopup="true" aria-expanded="false">ABOUT</a>
-                <div class="dropdown-menu" aria-labelledby="aboutDropdown">
-                    <a class="dropdown-item" href="ssbf.html">SSBF</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="iiita.html">IIITA</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="international-conference.html">International Conference</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="committee.html">Committee</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="speakers.html">Speakers</a>
-                </div>
-            </li>
-
-            <!-- Program Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="#" id="programDropdown" role="button"
-                    aria-haspopup="true" aria-expanded="false">PROGRAM</a>
-                <div class="dropdown-menu" aria-labelledby="programDropdown">
-                    <a class="dropdown-item" href="tutorials.html">Tutorials</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="panel-discussion.html">Panel Discussion</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="city-tour.html">City Tour</a>
-                </div>
-            </li>
-
-            <!-- Registration Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="#" id="regDropdown" role="button"
-                    aria-haspopup="true" aria-expanded="false">REGISTRATION</a>
-                <div class="dropdown-menu" aria-labelledby="regDropdown">
-                    <a class="dropdown-item" href="fees.html">Fees</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSezXlv9MHBZ9DfqydPA7_koqY_a55ErUieqXXDM-a3kILGsWw/viewform?usp=sf_link">
-                        Register
-                    </a>
-                </div>
-            </li>
-
-            <!-- Publications Dropdown -->
-             <li class="nav-item">
-                <a class="nav-link page-scroll" href="publication.html">PAST PROCEEDINGS</a>
-            </li>
-
-            <!-- Archive Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="#" id="archiveDropdown" role="button"
-                    aria-haspopup="true" aria-expanded="false">ARCHIVE</a>
-                <div class="dropdown-menu" aria-labelledby="archiveDropdown">
-                    <a class="dropdown-item" href="./assets/2025-9.pdf" target="_blank">2025</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./assets/2024-8.pdf" target="_blank">2024</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./assets/2023-6.pdf" target="_blank">2023</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./assets/2022-5.pdf" target="_blank">2022</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./assets/2020-3.pdf" target="_blank">2020</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./assets/2019.pdf" target="_blank">2019</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./assets/2018.pdf" target="_blank">2018</a>
-                </div>
-            </li>
-
-            <!-- Paper Submission -->
-            <li class="nav-item">
-                <a class="nav-link page-scroll" href="https://forms.gle/hMGLf5CGgYBQ363z7">PAPER SUBMISSION</a>
-            </li>
-
-            <!-- Contact -->
-            <li class="nav-item">
-                <a class="nav-link page-scroll" href="index.html#contact">CONTACT</a>
-            </li>
-
-        </ul>
-    </div>
-</nav>
-<!-- end of navbar -->
-
-
-
-
-    <!-- Header -->
+   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <a class="navbar-brand logo-image" href="index.html"
+            style="color:#FFB300; font-size:2em;font-family: 'Acme', sans-serif; text-decoration: none;">
+            <img src="images/iiita.gif" class="main-logo"><span> </span>IIIT ALLAHABAD
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link page-scroll" href="index.html">HOME</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="#" id="aboutDropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">ABOUT</a>
+                    <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                        <a class="dropdown-item" href="ssbf.html">SSBF</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="iiita.html">IIITA</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="international-conference.html">International Conference</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="committee.html">Committee</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="speakers.html">Speakers</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="#" id="programDropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">PROGRAM</a>
+                    <div class="dropdown-menu" aria-labelledby="programDropdown">
+                        <a class="dropdown-item" href="tutorials.html">Tutorials</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="panel-discussion.html">Panel Discussion</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="city-tour.html">City Tour</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="#" id="regDropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">REGISTRATION</a>
+                    <div class="dropdown-menu" aria-labelledby="regDropdown">
+                        <a class="dropdown-item" href="fees.html">Fees</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item"
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSezXlv9MHBZ9DfqydPA7_koqY_a55ErUieqXXDM-a3kILGsWw/viewform?usp=sf_link">
+                            Register
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link page-scroll" href="publication.html">PAST PROCEEDINGS</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="#" id="archiveDropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">ARCHIVE</a>
+                    <div class="dropdown-menu" aria-labelledby="archiveDropdown">
+                        <a class="dropdown-item" href="./assets/2025-9.pdf" target="_blank">2025</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./assets/2024-8.pdf" target="_blank">2024</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./assets/2023-6.pdf" target="_blank">2023</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./assets/2022-5.pdf" target="_blank">2022</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./assets/2020-3.pdf" target="_blank">2020</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./assets/2019.pdf" target="_blank">2019</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./assets/2018.pdf" target="_blank">2018</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link page-scroll" href="https://forms.gle/hMGLf5CGgYBQ363z7">PAPER SUBMISSION</a></li>
+                <li class="nav-item"><a class="nav-link page-scroll" href="index.html#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
     <header id="header" class="ex-header">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="white">International Conference </h1>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </header> <!-- end of ex-header -->
-    <!-- end of header -->
-
-
-    <!-- Breadcrumbs -->
+                    <h1 class="white">International Conference</h1>
+                </div>
+            </div>
+        </div>
+    </header>
     <div class="ex-basic-1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumbs">
                         <a href="index.html">Home</a><i class="fa fa-angle-double-right"></i><span>International Conference</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
-
-
-    <div class="ex-basic-2">
-    <div class="container">
-        
-        <!-- Conference Intro -->
-        <div class="row mb-4">
-            <div class="col-lg-12">
-                <div class="text-container">
-                    
-                    <h2 class="mb-3">International Conference on Behavioural Finance (ICBF)</h2>
-                    <h5 class="text-muted mb-4">1st – 5th December 2025 | IIIT Allahabad, Prayagraj</h5>
-                    
-                    <p>
-                        Building upon the success of earlier editions of the <strong>School on Behavioural Finance</strong>, 
-                        where participants and resource persons from across the globe gathered to share and disseminate knowledge, 
-                        the <strong>9th edition</strong> proudly introduces an <em>International Conference on Behavioural Finance</em>. 
-                    </p>
-                    <p>
-                        In the quest for deeper understanding of behaviours that deviate from classical paradigms of rationality, 
-                        this conference is dedicated to <strong>contemporary developments in behavioural finance</strong>. 
-                        It welcomes <em>theoretical, empirical, case study, interview-based, and experimental works</em>, 
-                        offering an interdisciplinary platform for scholars, professionals, and students alike.
-                    </p>
-                    
+                    </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Conference Tracks -->
-        <div class="row mb-5">
-            <div class="col-lg-12">
-                <h3 class="mb-3">Conference Tracks</h3>
-                <p>The conference will feature multiple tracks, invited talks, and special sessions covering diverse themes:</p>
-                <ul class="list-unstyled ms-3">
-                    <li class="mb-2"><strong>Track 1: Qualitative Research</strong> – Qualitative approaches and applications in behavioural finance.</li>
-                    <li class="mb-2"><strong>Track 2: Marketing and Behavioural Finance</strong> – Consumer financial behaviour, product marketing, digital & green marketing, and emerging intersections of marketing and finance.</li>
-                    <li class="mb-2"><strong>Track 3: Human Resource and Behavioural Finance</strong> – HR practices and their impact on individual and organizational financial decisions.</li>
-                    <li class="mb-2"><strong>Track 4: Operations Management and Behavioural Finance</strong> – Operational aspects shaping financial behaviour and decision-making.</li>
-                    <li class="mb-2"><strong>Track 5: IT and Systems Management</strong> – Technology, IT systems, and digital innovations influencing finance.</li>
-                    <li class="mb-2"><strong>Track 6: Contemporary Issues in Management</strong> – Emerging developments in management, economics, and commerce intersecting with behavioural finance.</li>
-                    <li class="mb-2"><strong>Track 7: Business Informatics and FinTech</strong> – AI analytics, blockchain, digital payments, and fintech innovations reshaping financial services.</li>
-                    <li class="mb-2"><strong>Special Tracks</strong> – Proposals invited on topics such as sustainable marketing, fintech innovations, and AI-driven consumer insights. 
-                        Submit your proposal to <a href="mailto:ssbf@iiita.ac.in">ssbf@iiita.ac.in</a>.
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-        <!-- Paper Submission -->
-        <div class="row mb-5">
-            <div class="col-lg-12">
-                <h3 class="mb-3">Paper Submission Guidelines</h3>
-                <ul class="ms-3">
-                    <li>Papers must be <strong>original and unpublished</strong>, aligned with the conference theme.</li>
-                    <li><strong>Structured Abstract</strong>: 200–250 words (include objectives, methodology, and key findings).</li>
-                    <li><strong>Full Paper</strong>: 6,000–6,500 words.</li>
-                    <li>Suggested structure: Introduction, Review of Literature, Research Gap, Methodology, Findings, Contributions, Limitations, and Scope for Future Research.</li>
-                    <li>Formatting: A4, Times New Roman, size 12, 1.5 spacing.</li>
-                    <li>Reference style: APA (6th edition).</li>
-                </ul>
-            </div>
-        </div>
-        
-        <!-- Best Paper -->
-        <div class="row mb-5">
-            <div class="col-lg-12">
-                <h3 class="mb-3">Best Paper Award</h3>
-                <p>Best Papers will be recognized by the committee under the following categories:</p>
-                <ul class="ms-3">
-                    <li><strong>Category 1:</strong> Academicians, Corporate Professionals, Research Scholars</li>
-                    <li><strong>Category 2:</strong> Students</li>
-                </ul>
-            </div>
-        </div>
-        
-        <!-- Important Dates -->
-        <div class="row mb-5">
-            <div class="col-lg-12">
-                <h3 class="mb-3">Important Dates</h3>
-                <ul class="ms-3">
-                    <li><strong>Abstract Submission Deadline:</strong> 31st October 2025</li>
-                    <li><strong>Notification of Acceptance:</strong> 10th November 2025</li>
-                    <li><strong>Full Paper Submission:</strong> 15th November 2025</li>
-                    <li><strong>Conference Registration Deadline:</strong> 20th November 2025</li>
-                </ul>
-            </div>
-        </div>
-        
-        <!-- CTA Button -->
-            <div class="form-group">
-                <button onclick="document.location='https://forms.gle/hMGLf5CGgYBQ363z7'" target="_blank" class="form-control-submit-button">
-                    Submit Your Abstract Here
-                </button>
-            </div>
-        
     </div>
+    <div class="content-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="info-card">
+                        <h2 class="mb-3">International Conference on Behavioural Finance (ICBF)</h2>
+                        <h5 class="mb-4">1st – 5th December 2025 | IIIT Allahabad, Prayagraj</h5>
+                        <p style="color: antiquewhite;">Building upon the success of earlier editions of the <strong>School on Behavioural Finance</strong>, the <strong>9th edition</strong> proudly introduces an International Conference dedicated to contemporary developments in the field. We welcome theoretical, empirical, and experimental works, offering an interdisciplinary platform for scholars, professionals, and students.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-lg-6 d-flex align-items-stretch mb-4">
+                    <div class="info-card">
+                        <h3 class="mb-3">Conference Tracks</h3>
+                        <p>The conference features multiple tracks covering diverse themes:</p>
+                        <ul>
+                            <li><strong>Qualitative Research:</strong> Approaches and applications in behavioural finance.</li>
+                            <li><strong>Marketing:</strong> Consumer financial behaviour, digital & green marketing.</li>
+                            <li><strong>Human Resources:</strong> HR practices and their impact on financial decisions.</li>
+                            <li><strong>Operations Management:</strong> Operational aspects shaping financial behaviour.</li>
+                            <li><strong>IT and Systems:</strong> Technology and digital innovations influencing finance.</li>
+                            <li><strong>Contemporary Issues:</strong> Emerging developments in management and economics.</li>
+                            <li><strong>Business Informatics & FinTech:</strong> AI analytics, blockchain, and digital payments.</li>
+                            <li><strong>Special Tracks:</strong> Proposals on topics like sustainable marketing and AI-driven insights are invited.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-stretch mb-4">
+                    <div class="info-card">
+                        <h3 class="mb-3">Paper Submission Guidelines</h3>
+                        <ul>
+                            <li>Papers must be <strong>original and unpublished</strong>.</li>
+                            <li><strong>Structured Abstract:</strong> 200–250 words (include objectives, methodology, findings).</li>
+                            <li><strong>Full Paper:</strong> 6,000–6,500 words.</li>
+                            <li><strong>Suggested Structure:</strong> Intro, Literature Review, Research Gap, Methodology, Findings, Contributions, Limitations.</li>
+                            <li><strong>Formatting:</strong> A4, Times New Roman, size 12, 1.5 spacing.</li>
+                            <li><strong>Reference Style:</strong> APA (6th edition).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-lg-6 d-flex align-items-stretch mb-4">
+                    <div class="info-card">
+                        <h3 class="mb-3">Best Paper Award</h3>
+                        <p style="color: antiquewhite">Best Papers will be recognized by the committee under the following categories:</p>
+                        <ul>
+                            <li><strong>Category 1:</strong> Academicians, Corporate Professionals, Research Scholars</li>
+                            <li><strong>Category 2:</strong> Students</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-stretch mb-4">
+                    <div class="info-card">
+                        <h3 class="mb-3">Important Dates</h3>
+                        <ul>
+                            <li><strong>Abstract Submission Deadline:</strong> 31st October 2025</li>
+                            <li><strong>Notification of Acceptance:</strong> 10th November 2025</li>
+                            <li><strong>Full Paper Submission:</strong> 15th November 2025</li>
+                            <li><strong>Conference Registration Deadline:</strong> 20th November 2025</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="cta-card">
+                        <a class="btn-solid-lg" href="https://forms.gle/hMGLf5CGgYBQ363z7" target="_blank">Submit Your Abstract Here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-
-    <!-- end of privacy content -->
-
-    <!-- Footer -->
     <div class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="footer-col third">
-                        <h5>Links</h5>
+                <div class="col-lg-4">
+                    <div class="footer-col">
+                        <h5>About SSBF</h5>
                         <ul class="list-unstyled li-space-lg p-small">
                             <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body"><a href="https://forms.gle/xKfLRbK9NiyM8Tk89">Register for SSBF</a></div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body"><a href="https://forms.gle/GoHoPymmkq274VAF8">Register for ICSF</a></div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body"><a href="https://forms.gle/LwXJiEZYMfjYdh3E7">Submit Abstract</a></div>
+                                <div class="media-body" style="color: #b0b0c0;">An immersive program blending spirituality, culture, and learning at the heart of Prayagraj.</div>
                             </li>
                         </ul>
                     </div>
-                </div> <!-- end of col -->
-
-                <div class="col-md-4">
-                    <div class="footer-col third">
-                        <h5>More Info.</h5>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-col">
+                        <h5>Important Links</h5>
                         <ul class="list-unstyled li-space-lg p-small">
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body"><a href="fees.html">Fees and Accomodation</a></div>
+                            <li class="media"><i class="fas fa-square"></i><div class="media-body"><a href="https://forms.gle/xKfLRbK9NiyM8Tk89">Register for SSBF</a></div></li>
+                            <li class="media"><i class="fas fa-square"></i><div class="media-body"><a href="fees.html">Fees and Accommodation</a></div></li>
+                            <li class="media"><i class="fas fa-square"></i><div class="media-body"><a href="iiita.html">About IIITA</a></div></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-col">
+                        <h5>Contact Us</h5>
+                        <ul class="list-unstyled li-space-lg p-small">
+                             <li class="media">
+                               <i class="fas fa-map-marker-alt"></i>
+                               <div class="media-body">IIIT Allahabad, Jhalwa, Prayagraj</div>
                             </li>
                             <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body"><a href="ssbf.html">About SSBF</a></div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body"><a href="iiita.html">About IIITA</a></div>
+                                <i class="fas fa-envelope"></i>
+                                <div class="media-body"><a href="mailto:ssbf@iiita.ac.in">ssbf@iiita.ac.in</a></div>
                             </li>
                         </ul>
                     </div>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of footer -->
-    <!-- end of footer -->
-
-    <!-- Copyright -->
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="copyright">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2025 <a href="https://iiita.ac.in">IIIT Allahabad</a> - All rights
-                        reserved</p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of copyright -->
-    <!-- end of copyright -->
-    	
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="https://ssbf.iiita.ac.in/js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
-    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="https://ssbf.iiita.ac.in/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="https://ssbf.iiita.ac.in/js/jquery.countdown.min.js"></script> <!-- The Final Countdown plugin for jQuery -->
-    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-    <script src="https://ssbf.iiita.ac.in/js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+                    <p class="p-small">Copyright © 2025 <a href="https://iiita.ac.in">IIIT Allahabad</a> - All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="https://ssbf.iiita.ac.in/js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ssbf.iiita.ac.in/js/jquery.easing.min.js"></script>
+    <script src="https://ssbf.iiita.ac.in/js/jquery.countdown.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="https://ssbf.iiita.ac.in/js/validator.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

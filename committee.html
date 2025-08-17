@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Landing page template built with HTML and Bootstrap 4 for presenting training courses, classes, workshops and for convincing visitors to register using the form.">
+    <meta name="description" content="The organizing committee for the SSBF program at IIIT Allahabad.">
     <meta name="author" content="Inovatik">
 
-    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-	<meta property="og:site_name" content="" /> <!-- website name -->
-	<meta property="og:site" content="" /> <!-- website link -->
-	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
-	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <!-- OG Meta Tags -->
+	<meta property="og:site_name" content="SSBF" />
+	<meta property="og:site" content="" />
+	<meta property="og:title" content="Committee | SSBF"/>
+	<meta property="og:description" content="Meet the organizing committee and advisors for the SSBF program." />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
 	<meta property="og:type" content="article" />
 
     <!-- Website Title -->
-    <title>Comittee | SSBF</title>
+    <title>Committee | SSBF</title>
     
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/fontawesome-all.css" rel="stylesheet">
     <link href="css/swiper.css" rel="stylesheet">
@@ -32,118 +33,207 @@
 	<!-- Favicon  -->
     <link rel="icon" href="https://ssbf.iiita.ac.in/images/favicon.png">
 
-    
+    <!-- Custom Styles for this Page -->
+    <style>
+        body {
+            background-color: #0c0a18; /* Set a base dark background */
+        }
+
+        /* --- Main Team Section --- */
+        .team-section {
+            padding: 6rem 0;
+            background: radial-gradient(ellipse at 50% 50%, #1a1a2e 0%, #0c0a18 100%);
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-section .section-title {
+            font-weight: 800;
+            font-size: 3rem;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        /* --- Profile Card --- */
+        .profile-card {
+            background: rgba(30, 28, 58, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 179, 0, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            width: 100%; /* FIX: Ensures card fills its column */
+            height: 100%; /* Essential for vertical alignment */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+            border-color: rgba(255, 179, 0, 0.4);
+        }
+
+        .profile-img-container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #FFB300;
+            box-shadow: 0 0 15px rgba(255, 179, 0, 0.3),
+                        0 0 30px rgba(255, 179, 0, 0.2);
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-card:hover .profile-img-container img {
+            transform: scale(1.05);
+        }
+
+        .profile-info h5 {
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-info span {
+            color: #b0b0c0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* --- Lists Section --- */
+        .list-section {
+            padding: 0 0 6rem 0;
+            background: radial-gradient(ellipse at 50% 50%, #1a1a2e 0%, #0c0a18 100%);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .list-container {
+            background: rgba(20, 18, 38, 0.6);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(80, 70, 220, 0.2);
+            border-radius: 24px;
+            padding: 3rem;
+        }
+
+        .list-container h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-weight: 700;
+        }
+
+        .list-items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .list-item {
+            color: #b0b0c0;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            border-left: 3px solid #FFB300;
+            transition: all 0.3s ease;
+        }
+
+        .list-item:hover {
+            background: rgba(255, 179, 0, 0.1);
+            color: #ffffff;
+            transform: scale(1.03);
+            cursor: default;
+        }
+    </style>
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
     
     <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-
-    <!-- Logo -->
-    <a class="navbar-brand logo-image" href="index.html"
-        style="color:#FFB300; font-size:2em;font-family: 'Acme', sans-serif; text-decoration: none;">
-        <img src="images/iiita.gif" class="main-logo"><span> </span>IIIT ALLAHABAD
-    </a>
-
-    <!-- Mobile Menu Toggle -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-awesome fas fa-bars"></span>
-        <span class="navbar-toggler-awesome fas fa-times"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav ml-auto">
-
-            <!-- Home -->
-            <li class="nav-item">
-                <a class="nav-link page-scroll" href="index.html">HOME</a>
-            </li>
-
-            <!-- About Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="#" id="aboutDropdown" role="button"
-                    aria-haspopup="true" aria-expanded="false">ABOUT</a>
-                <div class="dropdown-menu" aria-labelledby="aboutDropdown">
-                    <a class="dropdown-item" href="ssbf.html">SSBF</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="iiita.html">IIITA</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="international-conference.html">International Conference</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="committee.html">Committee</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="speakers.html">Speakers</a>
-                </div>
-            </li>
-
-            <!-- Program Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="#" id="programDropdown" role="button"
-                    aria-haspopup="true" aria-expanded="false">PROGRAM</a>
-                <div class="dropdown-menu" aria-labelledby="programDropdown">
-                    <a class="dropdown-item" href="tutorials.html">Tutorials</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="panel-discussion.html">Panel Discussion</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="city-tour.html">City Tour</a>
-                </div>
-            </li>
-
-            <!-- Registration Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="#" id="regDropdown" role="button"
-                    aria-haspopup="true" aria-expanded="false">REGISTRATION</a>
-                <div class="dropdown-menu" aria-labelledby="regDropdown">
-                    <a class="dropdown-item" href="fees.html">Fees</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSezXlv9MHBZ9DfqydPA7_koqY_a55ErUieqXXDM-a3kILGsWw/viewform?usp=sf_link">
-                        Register
-                    </a>
-                </div>
-            </li>
-
-            <!-- Publications Dropdown -->
-             <li class="nav-item">
-                <a class="nav-link page-scroll" href="publication.html">PAST PROCEEDINGS</a>
-            </li>
-
-            <!-- Archive Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="#" id="archiveDropdown" role="button"
-                    aria-haspopup="true" aria-expanded="false">ARCHIVE</a>
-                <div class="dropdown-menu" aria-labelledby="archiveDropdown">
-                    <a class="dropdown-item" href="./assets/2025-9.pdf" target="_blank">2025</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./assets/2024-8.pdf" target="_blank">2024</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./assets/2023-6.pdf" target="_blank">2023</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./assets/2022-5.pdf" target="_blank">2022</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./assets/2020-3.pdf" target="_blank">2020</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./assets/2019.pdf" target="_blank">2019</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./assets/2018.pdf" target="_blank">2018</a>
-                </div>
-            </li>
-
-            <!-- Paper Submission -->
-            <li class="nav-item">
-                <a class="nav-link page-scroll" href="https://forms.gle/hMGLf5CGgYBQ363z7">PAPER SUBMISSION</a>
-            </li>
-
-            <!-- Contact -->
-            <li class="nav-item">
-                <a class="nav-link page-scroll" href="index.html#contact">CONTACT</a>
-            </li>
-
-        </ul>
-    </div>
-</nav>
-<!-- end of navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <a class="navbar-brand logo-image" href="index.html"
+            style="color:#FFB300; font-size:2em;font-family: 'Acme', sans-serif; text-decoration: none;">
+            <img src="images/iiita.gif" class="main-logo"><span> </span>IIIT ALLAHABAD
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link page-scroll" href="index.html">HOME</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="#" id="aboutDropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">ABOUT</a>
+                    <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                        <a class="dropdown-item" href="ssbf.html">SSBF</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="iiita.html">IIITA</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="international-conference.html">International Conference</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="committee.html">Committee</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="speakers.html">Speakers</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="#" id="programDropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">PROGRAM</a>
+                    <div class="dropdown-menu" aria-labelledby="programDropdown">
+                        <a class="dropdown-item" href="tutorials.html">Tutorials</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="panel-discussion.html">Panel Discussion</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="city-tour.html">City Tour</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="#" id="regDropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">REGISTRATION</a>
+                    <div class="dropdown-menu" aria-labelledby="regDropdown">
+                        <a class="dropdown-item" href="fees.html">Fees</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item"
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSezXlv9MHBZ9DfqydPA7_koqY_a55ErUieqXXDM-a3kILGsWw/viewform?usp=sf_link">
+                            Register
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link page-scroll" href="publication.html">PAST PROCEEDINGS</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="#" id="archiveDropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">ARCHIVE</a>
+                    <div class="dropdown-menu" aria-labelledby="archiveDropdown">
+                        <a class="dropdown-item" href="./assets/2025-9.pdf" target="_blank">2025</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./assets/2024-8.pdf" target="_blank">2024</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./assets/2023-6.pdf" target="_blank">2023</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./assets/2022-5.pdf" target="_blank">2022</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./assets/2020-3.pdf" target="_blank">2020</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./assets/2019.pdf" target="_blank">2019</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./assets/2018.pdf" target="_blank">2018</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link page-scroll" href="https://forms.gle/hMGLf5CGgYBQ363z7">PAPER SUBMISSION</a></li>
+                <li class="nav-item"><a class="nav-link page-scroll" href="index.html#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- end of navbar -->
 
 
     <!-- Header -->
@@ -151,11 +241,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="white">ORGANIZING COMITTEE </h1>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </header> <!-- end of ex-header -->
+                    <h1 class="white">ORGANIZING COMMITTEE</h1>
+                </div>
+            </div>
+        </div>
+    </header>
     <!-- end of header -->
 
 
@@ -165,174 +255,151 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumbs">
-                        <a href="index.html">Home</a><i class="fa fa-angle-double-right"></i><span>Comittee</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
+                        <a href="index.html">Home</a><i class="fa fa-angle-double-right"></i><span>Committee</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- end of breadcrumbs -->
 
-
-    <br>
-    <br>
-    <!--Main Content Starts-->
-<h1 style="text-align: center;">Organising Committee</h1>
-<br>
-
-<div class="container">
-    <!-- first row -->
-    <div class="row text-center mb-4">
-        <!-- Chief Patron -->
-        <div class="col-md-6 col-sm-6 mb-4">
-            <div class="team-member">
-                <div class="team-img">
-                    <img src="./images/director.jpg" alt="Chief Patron" class="img-responsive pic">
+    <!-- Main Content Starts-->
+    <div class="team-section">
+        <div class="container">
+            <h1 class="section-title">Organising Committee</h1>
+            
+            <!-- Top Organizers -->
+            <div class="row mb-5">
+                <div class="col-md-6 d-flex align-items-stretch mb-4">
+                    <div class="profile-card">
+                        <div class="profile-img-container">
+                            <img src="./images/director.jpg" alt="Chief Patron">
+                        </div>
+                        <div class="profile-info">
+                            <h5>Prof. M. S. Sutaone</h5>
+                            <span>Director, IIIT Allahabad<br>Chief Patron</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="team-title mt-2">
-                    <h5>Prof. M. S. Sutaone</h5>
-                    <span>Director, IIIT Allahabad<br>Chief Patron</span>
+                <div class="col-md-6 d-flex align-items-stretch mb-4">
+                    <div class="profile-card">
+                        <div class="profile-img-container">
+                            <img src="https://ssbf.iiita.ac.in/./images/ranjit-singh.jpg" alt="Chief Programme Coordinator">
+                        </div>
+                        <div class="profile-info">
+                            <h5>Prof. Ranjit Singh</h5>
+                            <span>Department of Management Studies, IIIT Allahabad<br>Chief Programme Coordinator</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Chief Programme Coordinator -->
-        <div class="col-md-6 col-sm-6 mb-4">
-            <div class="team-member">
-                <div class="team-img">
-                    <img src="https://ssbf.iiita.ac.in/./images/ranjit-singh.jpg" alt="Chief Programme Coordinator" class="img-responsive pic">
+                <div class="col-md-6 d-flex align-items-stretch mb-4">
+                    <div class="profile-card">
+                        <div class="profile-img-container">
+                            <img src="https://ssbf.iiita.ac.in/./images/saurabhmishra.jpg" alt="Coordinator">
+                        </div>
+                        <div class="profile-info">
+                            <h5>Dr. Saurabh Mishra</h5>
+                            <span>Assistant Professor, Department of Management Studies, IIIT Allahabad<br>Coordinator</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="team-title mt-2">
-                    <h5>Prof. Ranjit Singh</h5>
-                    <span>Department of Management Studies, IIIT Allahabad<br>Chief Programme Coordinator</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- second row -->
-    <div class="row text-center mb-4">
-        <!-- Coordinator 1 -->
-        <div class="col-md-6 col-sm-6 mb-4">
-            <div class="team-member">
-                <div class="team-img">
-                    <img src="https://ssbf.iiita.ac.in/./images/saurabhmishra.jpg" alt="Coordinator" class="img-responsive pic">
-                </div>
-                <div class="team-title mt-2">
-                    <h5>Dr. Saurabh Mishra</h5>
-                    <span>Assistant Professor, Department of Management Studies, IIIT Allahabad<br>Coordinator</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Coordinator 2 -->
-        <div class="col-md-6 col-sm-6 mb-4">
-            <div class="team-member">
-                <div class="team-img">
-                    <img src="https://ssbf.iiita.ac.in/./images/shashikant-rai.jpg" alt="Coordinator" class="img-responsive pic">
-                </div>
-                <div class="team-title mt-2">
-                    <h5>Dr. Shashikant Rai</h5>
-                    <span>Assistant Professor, Department of Management Studies, IIIT Allahabad<br>Coordinator</span>
+                <div class="col-md-6 d-flex align-items-stretch mb-4">
+                    <div class="profile-card">
+                        <div class="profile-img-container">
+                            <img src="https://ssbf.iiita.ac.in/./images/shashikant-rai.jpg" alt="Coordinator">
+                        </div>
+                        <div class="profile-info">
+                            <h5>Dr. Shashikant Rai</h5>
+                            <span>Assistant Professor, Department of Management Studies, IIIT Allahabad<br>Coordinator</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<br>
-<h2 style="text-align: center;">Organizing Committee Members</h2>
-<br>
+    <div class="list-section">
+        <div class="container">
+            <!-- Organizing Committee Members -->
+            <div class="list-container mb-5">
+                <h2>Organizing Committee Members</h2>
+                <div class="list-items-grid">
+                    <div class="list-item">Dr. Jayashree Bhattacharjee, Symbiosis International University, Pune</div>
+                    <div class="list-item">Dr. Kajol, GSFC University, Vadodara</div>
+                    <div class="list-item">Dr. Suman Agarwal, Assam Royal Global University, Guwahati</div>
+                    <div class="list-item">Ms. Sahiba Khan, Research Scholar, IIITA</div>
+                    <div class="list-item">Mr. Lokendra Puri, Research Scholar, IIITA</div>
+                    <div class="list-item">Ms. Lata Pandey, Research Scholar, IIITA</div>
+                    <div class="list-item">Ms. Sakshi Pandey, Research Scholar, IIITA</div>
+                    <div class="list-item">Mr. Jatin Sethi, Research Scholar, IIITA</div>
+                    <div class="list-item">Mr. Rahul Yadav, Research Scholar, IIITA</div>
+                    <div class="list-item">Mr. Arpit Gupta, Research Scholar, IIITA</div>
+                </div>
+            </div>
 
-<div class="container">
-    <ul style="list-style-type: none; padding-left: 0; text-align: center; line-height: 1.8;">
-        <li>Dr. Jayashree Bhattacharjee, Assistant Professor, Symbiosis International University, Pune</li>
-        <li>Dr. Kajol, Assistant Professor, GSFC University, Vadodara</li>
-        <li>Dr. Suman Agarwal, Assistant Professor, Assam Royal Global University, Guwahati</li>
-        <li>Ms. Sahiba Khan, Research Scholar, Department of Management Studies, IIITA</li>
-        <li>Mr. Lokendra Puri, Research Scholar, Department of Management Studies, IIITA</li>
-        <li>Ms. Lata Pandey, Research Scholar, Department of Management Studies, IIITA</li>
-        <li>Ms. Sakshi Pandey, Research Scholar, Department of Management Studies, IIITA</li>
-        <li>Mr. Jatin Sethi, Research Scholar, Department of Management Studies, IIITA</li>
-        <li>Mr. Rahul Yadav, Research Scholar, Department of Management Studies, IIITA</li>
-        <li>Mr. Arpit Gupta, Research Scholar, Department of Management Studies, IIITA</li>
-    </ul>
-</div>
-
-<br>
-<h2 style="text-align: center;">Advisors</h2>
-<br>
-
-<div class="container">
-    <ul style="list-style-type: none; padding-left: 0; text-align: center; line-height: 1.8;">
-        <li>Prof. Amalesh Bhowal, Assam University, Diphu Campus</li>
-        <li>Prof. Neharika Vohra, Indian Institute of Management, Ahmedabad</li>
-        <li>Prof. Raj Kumar Singh, Banaras Hindu University</li>
-        <li>Prof. V. K. Shrotriya, Delhi School of Economics</li>
-        <li>Prof. Nageshwar Rao, Vice Chancellor, IGNOU</li>
-        <li>Prof. G. P. Prasain, Vice Chancellor, Tripura University</li>
-        <li>Prof. Madhumita Chakraborty, Indian Institute of Management, Lucknow</li>
-        <li>Prof. Neeraj Pandey, Indian Institute of Management, Mumbai</li>
-        <li>Prof. Sujit Deb, Faculty of Management Studies, ICFAI University, Tripura</li>
-        <li>Dr. Ambrish Singh, Registrar, Rajkeeya Engineering College, Azamgarh</li>
-    </ul>
-</div>
-
+            <!-- Advisors -->
+            <div class="list-container">
+                <h2>Advisors</h2>
+                <div class="list-items-grid">
+                    <div class="list-item">Prof. Amalesh Bhowal, Assam University, Diphu Campus</div>
+                    <div class="list-item">Prof. Neharika Vohra, IIM, Ahmedabad</div>
+                    <div class="list-item">Prof. Raj Kumar Singh, Banaras Hindu University</div>
+                    <div class="list-item">Prof. V. K. Shrotriya, Delhi School of Economics</div>
+                    <div class="list-item">Prof. Nageshwar Rao, Vice Chancellor, IGNOU</div>
+                    <div class="list-item">Prof. G. P. Prasain, Vice Chancellor, Tripura University</div>
+                    <div class="list-item">Prof. Madhumita Chakraborty, IIM, Lucknow</div>
+                    <div class="list-item">Prof. Neeraj Pandey, IIM, Mumbai</div>
+                    <div class="list-item">Prof. Sujit Deb, ICFAI University, Tripura</div>
+                    <div class="list-item">Dr. Ambrish Singh, Rajkeeya Engineering College, Azamgarh</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--Main Content Ends-->
 
-    <!-- Privacy Content -->
-    <div class="ex-basic-2">
-
-    </div> <!-- end of ex-basic-2 -->
-    <!-- end of privacy content -->
-
-        <!-- Footer -->
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="footer-col third">
-                            <h5>Links</h5>
-                            <ul class="list-unstyled li-space-lg p-small">
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body"><a href="https://forms.gle/xKfLRbK9NiyM8Tk89">Register for SSBF</a></div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body"><a href="https://forms.gle/GoHoPymmkq274VAF8">Register for ICSF</a></div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body"><a href="https://forms.gle/LwXJiEZYMfjYdh3E7">Submit Abstract</a></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> <!-- end of col -->
-    
-                    <div class="col-md-4">
-                        <div class="footer-col third">
-                            <h5>More Info.</h5>
-                            <ul class="list-unstyled li-space-lg p-small">
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body"><a href="fees.html">Fees and Accomodation</a></div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body"><a href="ssbf.html">About SSBF</a></div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body"><a href="iiita.html">About IIITA</a></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of container -->
-        </div> <!-- end of footer -->
-        <!-- end of footer -->
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-col">
+                        <h5>About SSBF</h5>
+                        <ul class="list-unstyled li-space-lg p-small">
+                            <li class="media">
+                                <div class="media-body" style="color: #b0b0c0;">An immersive program blending spirituality, culture, and learning at the heart of Prayagraj.</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-col">
+                        <h5>Important Links</h5>
+                        <ul class="list-unstyled li-space-lg p-small">
+                            <li class="media"><i class="fas fa-square"></i><div class="media-body"><a href="https://forms.gle/xKfLRbK9NiyM8Tk89">Register for SSBF</a></div></li>
+                            <li class="media"><i class="fas fa-square"></i><div class="media-body"><a href="fees.html">Fees and Accommodation</a></div></li>
+                            <li class="media"><i class="fas fa-square"></i><div class="media-body"><a href="iiita.html">About IIITA</a></div></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-col">
+                        <h5>Contact Us</h5>
+                        <ul class="list-unstyled li-space-lg p-small">
+                             <li class="media">
+                               <i class="fas fa-map-marker-alt"></i>
+                               <div class="media-body">IIIT Allahabad, Jhalwa, Prayagraj</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-envelope"></i>
+                                <div class="media-body"><a href="mailto:ssbf@iiita.ac.in">ssbf@iiita.ac.in</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of footer -->
 
 
     <!-- Copyright -->
@@ -340,23 +407,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2022 <a href="https://iiita.ac.in">IIIT Allahabad</a> - All rights
-                        reserved</p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of copyright -->
+                    <p class="p-small">Copyright © 2025 <a href="https://iiita.ac.in">IIIT Allahabad</a> - All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- end of copyright -->
     	
     <!-- Scripts -->
-    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="https://ssbf.iiita.ac.in/js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
-    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="https://ssbf.iiita.ac.in/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="https://ssbf.iiita.ac.in/js/jquery.countdown.min.js"></script> <!-- The Final Countdown plugin for jQuery -->
-    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-    <script src="https://ssbf.iiita.ac.in/js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="https://ssbf.iiita.ac.in/js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ssbf.iiita.ac.in/js/jquery.easing.min.js"></script>
+    <script src="https://ssbf.iiita.ac.in/js/jquery.countdown.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="https://ssbf.iiita.ac.in/js/validator.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
