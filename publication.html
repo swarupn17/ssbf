@@ -11,7 +11,7 @@
 
     <meta property="og:site_name" content="SSBF" /> <meta property="og:site" content="" /> <meta property="og:title" content="Publication Opportunities | SSBF" /> <meta property="og:description" content="Explore publication opportunities in reputed Scopus and ABDC indexed journals for papers presented at the SSBF conference." /> <meta property="og:image" content="" /> <meta property="og:url" content="" /> <meta property="og:type" content="article" />
 
-    <title>Publication | SSBF</title>
+    <title>Past Proceedings| SSBF</title>
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,700,700i&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap">
@@ -97,6 +97,242 @@
             background-color: #5046dc;
             color: #ffffff;
         }
+        /* ---------- Past Proceedings cards ---------- */
+        .past-section {
+        padding: 6.5rem 0;
+        background: radial-gradient(ellipse at 50% 50%, #15162a 0%, #0c0a18 100%);
+        color: #e9eef9;
+        font-family: 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Intro */
+        .past-section .section-intro {
+        text-align: center;
+        margin-bottom: 3.5rem;
+        z-index: 2;
+        }
+        .past-section .section-intro h2 {
+        color: #ffffff;
+        font-weight: 800;
+        font-size: 2.25rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.2px;
+        }
+        .past-section .section-intro p {
+        color: #b8b9c5;
+        font-size: 1.05rem;
+        max-width: 900px;
+        margin: 0 auto;
+        line-height: 1.6;
+        }
+
+        /* Single-column centered layout (one card per row) */
+        .past-cards {
+        display: block;               /* single column */
+        max-width: 80rem;            /* control column width */
+        margin: 0 auto;              /* center the column */
+        padding: 0 1rem;             /* small horizontal gutters */
+        }
+
+        /* Card */
+        .past-card {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        margin: 0 0 1.75rem 0;       /* vertical gap between cards */
+        background: linear-gradient(180deg, rgba(55, 51, 104, 0.62), rgba(18,16,36,0.62));
+        border-radius: 16px;
+        padding: 1.9rem;
+        border: 1px solid rgba(255,179,0,0.10);
+        box-shadow:
+            0 6px 18px rgba(12,10,24,0.55),
+            0 1px 0 rgba(255,255,255,0.02) inset;
+        overflow: visible;
+        transition: transform 320ms cubic-bezier(.2,.9,.3,1),
+                    box-shadow 320ms ease,
+                    border-color 320ms ease;
+        min-height: 200px;
+        line-height: 1.6;
+        }
+
+        /* Soft halo behind card (subtle yellow glow) */
+        .past-card::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        width: 120%;
+        height: 60%;
+        transform: translate(-50%, -20%);
+        background: radial-gradient(closest-side, rgba(255,179,0,0.05), transparent 45%);
+        filter: blur(22px);
+        pointer-events: none;
+        z-index: 0;
+        opacity: 1;
+        transition: transform 320ms ease, opacity 320ms ease;
+        }
+
+        /* Accent stripe (thin) at top-left for a classic feel */
+        .past-card::after {
+        content: "";
+        position: absolute;
+        top: 0.65rem;
+        left: 0.65rem;
+        width: 48px;
+        height: 4px;
+        border-radius: 2px;
+        background: linear-gradient(90deg, rgba(255,211,90,0.95), rgba(255,179,0,0.95));
+        z-index: 3;
+        box-shadow: 0 4px 18px rgba(255,179,0,0.06);
+        }
+
+        /* Hover / focus (keyboard accessible) */
+        .past-card:hover,
+        .past-card:focus-within {
+        transform: translateY(-8px);
+        border-color: rgba(255,179,0,0.26);
+        box-shadow:
+            0 26px 60px rgba(12,10,24,0.65),
+            0 18px 40px rgba(80,60,0,0.10);
+        }
+        .past-card:hover::before,
+        .past-card:focus-within::before {
+        transform: translate(-50%, -28%) scale(1.06);
+        opacity: 1;
+        }
+
+        /* Card header (year badge + optional right-side meta) */
+        .past-card .card-head {
+        position: relative;
+        z-index: 4;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        }
+        .past-card .year {
+        flex: 0 0 auto;
+        font-weight: 800;
+        color: #ffde78;
+        background: rgba(255, 179, 0, 0.06);
+        padding: 0.35rem 0.85rem;
+        border-radius: 12px;
+        font-size: 0.95rem;
+        letter-spacing: .6px;
+        box-shadow: 0 6px 18px rgba(12,10,24,0.12);
+        }
+
+        /* Title */
+        .past-card h3 {
+        margin: 0.6rem 0 0.9rem 0;
+        color: #ffffff;
+        font-size: 1.22rem;
+        z-index: 4;
+        font-weight: 700;
+        }
+
+        /* Highlights (paragraphs preserved) */
+        .past-card .highlights p{
+        color: #d0d0dc;
+        font-size: 0.98rem;
+        line-height: 1.62;
+        margin-bottom: 0.9rem;
+        position: relative;
+        z-index: 4;
+        }
+
+        /* Key takeaways block */
+        .past-card .takeaways {
+        margin-top: 0.6rem;
+        color: #f2eeda;
+        z-index: 4;
+        }
+        .past-card .takeaways strong {
+        color: #ffebae;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 0.4rem;
+        font-size: 0.98rem;
+        }
+        .past-card .takeaways ul {
+        margin: 0.25rem 0 0 1.15rem;
+        padding: 0;
+        color: #e6e0c6;
+        line-height: 1.5;
+        font-size: 0.95rem;
+        }
+
+        /* Read more button — pill style, accessible */
+        .read-more-btn {
+        display: inline-block;
+        margin-top: 1.1rem;
+        padding: 0.52rem 1rem;
+        border-radius: 999px;
+        background: linear-gradient(90deg, rgba(255,211,90,1), rgba(255,179,0,1));
+        color: #0c0a18;
+        font-weight: 800;
+        text-decoration: none;
+        box-shadow: 0 8px 30px rgba(255,179,0,0.08);
+        transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
+        z-index: 5;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        gap: .5rem;
+        }
+
+        /* Hover / focus for button */
+        .read-more-btn:hover,
+        .read-more-btn:focus {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 18px 48px rgba(255,179,0,0.18);
+        filter: saturate(1.05);
+        outline: none;
+        }
+
+        /* Keyboard focus visible (stronger outline for accessibility) */
+        .read-more-btn:focus-visible {
+        box-shadow: 0 6px 28px rgba(255,179,0,0.14), 0 0 0 4px rgba(255,179,0,0.12);
+        border-radius: 999px;
+        }
+
+        /* Subtle muted text utility */
+        .past-card .muted {
+        color: #aeb0c0;
+        font-size: 0.92rem;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 992px) {
+        .past-section { padding: 4.5rem 0; }
+        .past-card { padding: 1.5rem; margin-bottom: 1.25rem; }
+        .past-card h3 { font-size: 1.08rem; }
+        .past-card .highlights { font-size: 0.98rem; }
+        .past-cards { max-width: 92%; }
+        }
+
+        /* Small screens */
+        @media (max-width: 576px) {
+        .past-section { padding: 3.25rem 0; }
+        .past-card { padding: 1.05rem; border-radius: 12px; }
+        .past-card::after { left: 0.6rem; top: 0.6rem; width: 40px; height: 3px; }
+        .past-card h3 { font-size: 1rem; margin-top: .45rem; }
+        .read-more-btn { padding: 0.45rem .85rem; font-size: 0.95rem; }
+        }
+
+        /* Respect reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+        .past-card,
+        .past-card::before,
+        .read-more-btn {
+            transition: none !important;
+            animation: none !important;
+        }
+        }
+
+
     </style>
 </head>
 
@@ -154,6 +390,7 @@
                     </div>
                 </li>
                 <li class="nav-item"><a class="nav-link page-scroll" href="publication.html">PAST PROCEEDINGS</a></li>
+                <li class="nav-item"><a class="nav-link page-scroll" href="gallery.html">Gallery</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle page-scroll" href="#" id="archiveDropdown" role="button"
                         aria-haspopup="true" aria-expanded="false">ARCHIVE</a>
@@ -165,6 +402,8 @@
                         <a class="dropdown-item" href="./assets/2023-6.pdf" target="_blank">2023</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="./assets/2022-5.pdf" target="_blank">2022</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./assets/2021-4.pdf" target="_blank">2021</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="./assets/2020-3.pdf" target="_blank">2020</a>
                         <div class="dropdown-divider"></div>
@@ -186,7 +425,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="white">Publication Opportunities</h1>
+                    <h1 class="white">Past Proceedings</h1>
                 </div>
             </div>
         </div>
@@ -196,117 +435,114 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumbs">
-                        <a href="index.html">Home</a><i class="fa fa-angle-double-right"></i><span>Publication Opportunities</span>
+                        <a href="index.html">Home</a><i class="fa fa-angle-double-right"></i><span>Past Proceedings</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="content-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1">
-                    <div class="info-box">
-                        <h3>A MEMORANDUM of UNDERSTANDING (MoU) has been signed BETWEEN CENTRE FOR RESEARCH ON ISLAMIC BANKING & FINANCE AND BUSINESS (CRIBFB) & CHIEF PROGRAMME COORDINATOR, SUMMER SCHOOL ON BEHAVIOURAL FINANCE, INDIAN INSTITUTE OF INFORMATION TECHNOLOGY (IIIT).</h3>
-                        <h4>We have collaborations with some of the reputed journals. Selected research papers will have the opportunity to be published in the following journals.</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
-                    <div class="journal-card">
-                        <div class="journal-name">Empirical Economics Letter</div>
-                        <div class="indexing-tags">
-                            <span class="tag">ABDC</span>
-                            <span class="tag scopus">SCOPUS</span>
-                            <span class="tag">UGC Care</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
-                    <div class="journal-card">
-                        <div class="journal-name">International Journal of Accounting and Finance Review</div>
-                        <div class="indexing-tags"><span class="tag">ABDC</span></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
-                    <div class="journal-card">
-                        <div class="journal-name">Indian Journal of Finance and Banking</div>
-                        <div class="indexing-tags"><span class="tag">ABDC</span></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
-                    <div class="journal-card">
-                        <div class="journal-name">Journal of Management Information and Decision Sciences</div>
-                        <div class="indexing-tags"><span class="tag scopus">SCOPUS</span></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
-                    <div class="journal-card">
-                        <div class="journal-name">Academy of Strategic Management Journal</div>
-                        <div class="indexing-tags"><span class="tag scopus">SCOPUS</span></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
-                    <div class="journal-card">
-                        <div class="journal-name">Academy of Accounting and Financial Studies Journal</div>
-                        <div class="indexing-tags"><span class="tag scopus">SCOPUS</span></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
-                    <div class="journal-card">
-                        <div class="journal-name">Turkish Online Journal of Qualitative Inquiry</div>
-                        <div class="indexing-tags"><span class="tag scopus">SCOPUS</span></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
-                    <div class="journal-card">
-                        <div class="journal-name">Linguistics and Culture Review</div>
-                        <div class="indexing-tags"><span class="tag scopus">SCOPUS</span></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
-                    <div class="journal-card">
-                        <div class="journal-name">International Journal of Electrical and Electronic Engineering & Telecommunications</div>
-                        <div class="indexing-tags"><span class="tag scopus">SCOPUS</span></div>
-                    </div>
-                </div>
-                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
-                    <div class="journal-card">
-                        <div class="journal-name">Linguistica Antverpiensia</div>
-                        <div class="indexing-tags"><span class="tag scopus">SCOPUS</span></div>
-                    </div>
-                </div>
-                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
-                    <div class="journal-card">
-                        <div class="journal-name">International Journal of Financial Management</div>
-                        <div class="indexing-tags"><span class="tag">J Gate</span><span class="tag">ICI</span></div>
-                    </div>
-                </div>
-                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
-                    <div class="journal-card">
-                        <div class="journal-name">International Journal of Banking, Risk and Insurance</div>
-                        <div class="indexing-tags"><span class="tag">Proquest</span><span class="tag">i-scholar</span><span class="tag">EBSCO</span></div>
-                    </div>
-                </div>
-                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
-                    <div class="journal-card">
-                        <div class="journal-name">International Journal of Business Ethics in Developing Economies</div>
-                        <div class="indexing-tags"><span class="tag">EBSCO</span><span class="tag">Proquest</span><span class="tag">i-scholar</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1">
-                    <div class="info-box" style="border-color: rgba(80, 70, 220, 0.2);">
-                       <p>Subsidized Article Publication Charges (APC) will have to be paid by the authors, if applicable. The journal requirements for publication have to be met by the authors.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
+    <!-- main content -->
+    <div class="content-section past-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 section-intro">
+        <h2>Past Proceedings</h2>
+        <p>Explore highlights from our past International Conferences on Behavioural Finance (ICBF). </p>
+      </div>
     </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="past-cards">
+
+          <!-- ICBF 2024 (row 1) -->
+          <article class="past-card" aria-labelledby="icbf2024">
+            <div class="card-head">
+              <div id="icbf2024" class="year">ICBF 2024</div>
+            </div>
+
+            <h3>Impact of GST on India’s Manufacturing Sector & Psychological Factors in Investment Decisions</h3>
+
+            <div class="highlights">
+              <p><strong>Impact of GST on India’s Manufacturing Sector (Priyank Srivastava).</strong> This paper examines how the introduction of GST influenced India’s textile and automobile sectors, particularly in terms of exports and turnover. Findings suggest a strong link between export performance and annual turnover, highlighting GST’s partial success in boosting competitiveness. Despite focusing on limited variables, the study provides groundwork for future research using broader datasets to assess policy impacts on industrial growth.</p>
+
+              <p><strong>Psychological Factors in Investment Decisions (Aishwarya Dutt Shukla).</strong> This study explores how emotions, biases, and cognitive errors such as anchoring, overconfidence, and loss aversion distort financial decisions and contribute to market anomalies. By reviewing existing literature, it challenges the notion of purely rational decision-making in traditional finance. The paper underscores the importance of integrating behavioural insights to help investors and policymakers manage risks, improve decision-making, and build more resilient financial systems.</p>
+            </div>
+
+            <div class="takeaways">
+              <strong>Key takeaways — ICBF 2024</strong>
+              <ul>
+                <li>GST shows measurable effects on industrial turnover and export competitiveness—further study with larger datasets is recommended.</li>
+                <li>Behavioural biases remain central to understanding market anomalies; policy and investor education can mitigate adverse effects.</li>
+              </ul>
+            </div>
+
+            <a class="read-more-btn" href="./assets/2024-ICBF.pdf" target="_blank" rel="noopener">Read More</a>
+          </article>
+          <!-- /ICBF 2024 -->
+
+          <!-- ICBF 2023 (row 2) -->
+          <article class="past-card" aria-labelledby="icbf2023">
+            <div class="card-head">
+              <div id="icbf2023" class="year">ICBF 2023</div>
+            </div>
+
+            <h3>Employee Engagement Post-COVID & Neo Banks in the Metaverse</h3>
+
+            <div class="highlights">
+              <p><strong>Employee Engagement Post-COVID (Bhartrihari Pandiya).</strong> This research uses bibliometric analysis to investigate employee engagement challenges following the pandemic. It highlights the impact of COVID-19 on motivation, productivity, and morale, stressing the need for innovative strategies to keep employees engaged. The study identifies research clusters, managerial insights, and practical measures for organizations to foster positive workplace culture, which is crucial for sustaining productivity in a post-pandemic world.</p>
+
+              <p><strong>Neo Banks in the Metaverse (Ravi Prakash Singh Patel &amp; Lokendra Puri).</strong> The paper examines the potential of Neo Banks—digital-only banks—to thrive in the emerging metaverse. It discusses how virtual reality can reshape customer interactions, enable personalized services, and offer immersive financial experiences. Key factors such as technological literacy, institutional support, and user self-efficacy significantly influence adoption. The study emphasizes both opportunities and challenges, positioning Neo Banks as frontrunners in the future of digital banking.</p>
+            </div>
+
+            <div class="takeaways">
+              <strong>Key takeaways — ICBF 2023</strong>
+              <ul>
+                <li>Post-COVID engagement strategies must include flexible policies and digital support to sustain morale and productivity.</li>
+                <li>The metaverse presents novel banking touchpoints; successful adoption depends on UX, literacy, and secure infrastructure.</li>
+                <li>Managers and product designers should incorporate behavioural insights to boost employee/customer trust and uptake.</li>
+              </ul>
+            </div>
+
+            <a class="read-more-btn" href="./assets/2023-ICBF.pdf" target="_blank" rel="noopener">Read More</a>
+          </article>
+          <!-- /ICBF 2023 -->
+
+          <!-- ICBF 2022 (row 3) -->
+          <article class="past-card" aria-labelledby="icbf2022">
+            <div class="card-head">
+              <div id="icbf2022" class="year">ICBF 2022</div>
+            </div>
+
+            <h3>Behavioural Biases of Millennial Investors in Baroda & West Godavari Study</h3>
+
+            <div class="highlights">
+              <p><strong>Behavioural Biases of Millennial Investors in Baroda (Rahul Chauhan).</strong> This study investigates how biases such as overconfidence, anchoring, representativeness, and herding affect millennial academic investors in Baroda. Based on survey data, it finds clear links between occupation, education, and susceptibility to biases. The research highlights the importance of financial awareness programs to reduce irrational decision-making and foster more informed investment practices among young investors.</p>
+
+              <p><strong>Behavioural Biases in West Godavari (Sri Pavani Balivada).</strong> Focusing on individual investors in Andhra Pradesh, this research explores the influence of representativeness, overconfidence, anchoring, and optimism biases on financial choices. The findings reveal optimism and representativeness as particularly strong influences, shaping investment decisions in significant ways. The study provides useful insights for financial institutions to design products that align with investor psychology.</p>
+            </div>
+
+            <div class="takeaways">
+              <strong>Key takeaways — ICBF 2022</strong>
+              <ul>
+                <li>Financial-awareness and targeted education can reduce common investor biases among younger demographics.</li>
+                <li>Institutions should design investment products and communication that account for optimism and representativeness biases.</li>
+              </ul>
+            </div>
+
+            <a class="read-more-btn" href="./assets/2022-ICBF.pdf" target="_blank" rel="noopener">Read More</a>
+          </article>
+          <!-- /ICBF 2022 -->
+
+        </div> <!-- /.past-cards -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
     <div class="footer">
         <div class="container">
             <div class="row">
