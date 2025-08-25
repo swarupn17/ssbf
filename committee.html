@@ -36,14 +36,15 @@
     <!-- Custom Styles for this Page -->
     <style>
         body {
-            background-color: #0c0a18; /* Set a base dark background */
+            background-color: #0c0a18;
+            font-family: 'Inter', sans-serif;
+            color: #b0b0c0;
         }
 
         /* --- Main Team Section --- */
         .team-section {
             padding: 6rem 0;
             background: radial-gradient(ellipse at 50% 50%, #1a1a2e 0%, #0c0a18 100%);
-            font-family: 'Inter', sans-serif;
             position: relative;
             overflow: hidden;
         }
@@ -56,7 +57,14 @@
             margin-bottom: 4rem;
         }
 
-        /* --- Profile Card --- */
+        .coordinator-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
         .profile-card {
             background: rgba(30, 28, 58, 0.6);
             backdrop-filter: blur(20px);
@@ -65,8 +73,8 @@
             padding: 2.5rem 2rem;
             text-align: center;
             transition: all 0.4s ease;
-            width: 100%; /* FIX: Ensures card fills its column */
-            height: 100%; /* Essential for vertical alignment */
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -79,18 +87,38 @@
             border-color: rgba(255, 179, 0, 0.4);
         }
 
+        .profile-card-c {
+            background: rgba(30, 28, 58, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 179, 0, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 380px;
+        }
+
+        .profile-card-c:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+            border-color: rgba(255, 179, 0, 0.4);
+        }
+
         .profile-img-container img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid #FFB300;
-            box-shadow: 0 0 15px rgba(255, 179, 0, 0.3),
-                        0 0 30px rgba(255, 179, 0, 0.2);
+            box-shadow: 0 0 15px rgba(255, 179, 0, 0.3), 0 0 30px rgba(255, 179, 0, 0.2);
             margin-bottom: 1.5rem;
             transition: transform 0.3s ease;
         }
-        
+
         .profile-card:hover .profile-img-container img {
             transform: scale(1.05);
         }
@@ -112,7 +140,6 @@
         .list-section {
             padding: 0 0 6rem 0;
             background: radial-gradient(ellipse at 50% 50%, #1a1a2e 0%, #0c0a18 100%);
-            font-family: 'Inter', sans-serif;
         }
 
         .list-container {
@@ -121,6 +148,7 @@
             border: 1px solid rgba(80, 70, 220, 0.2);
             border-radius: 24px;
             padding: 3rem;
+            margin-top: 3rem;
         }
 
         .list-container h2 {
@@ -268,96 +296,109 @@
 
     <!-- Main Content Starts-->
     <div class="team-section">
-        <div class="container">
-            <h1 class="section-title">Organising Committee</h1>
-            
-            <!-- Top Organizers -->
-            <div class="row mb-5">
-                <div class="col-md-6 d-flex align-items-stretch mb-4">
-                    <div class="profile-card">
-                        <div class="profile-img-container">
-                            <img src="./images/director.jpg" alt="Chief Patron">
-                        </div>
-                        <div class="profile-info">
-                            <h5>Prof. M. S. Sutaone</h5>
-                            <span>Director, IIIT Allahabad<br>Chief Patron</span>
-                        </div>
+    <div class="container">
+        <h1 class="section-title">Organising Committee</h1>
+        
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-6 col-md-8 col-sm-10 d-flex align-items-stretch mb-4">
+                <div class="profile-card">
+                    <div class="profile-img-container">
+                        <img src="./images/director.jpg" alt="Chief Patron">
+                    </div>
+                    <div class="profile-info">
+                        <h5>Prof. M. S. Sutaone</h5>
+                        <span>Director, IIIT Allahabad<br>Chief Patron</span>
                     </div>
                 </div>
-                <div class="col-md-6 d-flex align-items-stretch mb-4">
-                    <div class="profile-card">
-                        <div class="profile-img-container">
-                            <img src="https://ssbf.iiita.ac.in/./images/ranjit-singh.jpg" alt="Chief Programme Coordinator">
-                        </div>
-                        <div class="profile-info">
-                            <h5>Prof. Ranjit Singh</h5>
-                            <span>Department of Management Studies, IIIT Allahabad<br>Chief Programme Coordinator</span>
-                        </div>
+            </div>
+            <div class="col-lg-6 col-md-8 col-sm-10 d-flex align-items-stretch mb-4">
+                <div class="profile-card">
+                    <div class="profile-img-container">
+                        <img src="https://ssbf.iiita.ac.in/./images/ranjit-singh.jpg" alt="Chief Programme Coordinator">
+                    </div>
+                    <div class="profile-info">
+                        <h5>Prof. Ranjit Singh</h5>
+                        <span>Department of Management Studies, IIIT Allahabad<br>Chief Programme Coordinator</span>
                     </div>
                 </div>
-                <div class="col-md-6 d-flex align-items-stretch mb-4">
-                    <div class="profile-card">
-                        <div class="profile-img-container">
-                            <img src="https://ssbf.iiita.ac.in/./images/saurabhmishra.jpg" alt="Coordinator">
-                        </div>
-                        <div class="profile-info">
-                            <h5>Dr. Saurabh Mishra</h5>
-                            <span>Assistant Professor, Department of Management Studies, IIIT Allahabad<br>Coordinator</span>
-                        </div>
+            </div>
+        </div>
+
+        <h3 class="text-white text-center mt-5 mb-4">Coordinators</h3>
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
+                <div class="profile-card-c">
+                    <div class="profile-img-container">
+                        <img src="./images/vrijendra_singh.jpg" alt="Coordinator">
+                    </div>
+                    <div class="profile-info">
+                        <h5>Prof. Vrijendra Singh</h5>
+                        <span>Department of Information Technology, IIIT Allahabad</span>
                     </div>
                 </div>
-                <div class="col-md-6 d-flex align-items-stretch mb-4">
-                    <div class="profile-card">
-                        <div class="profile-img-container">
-                            <img src="https://ssbf.iiita.ac.in/./images/shashikant-rai.jpg" alt="Coordinator">
-                        </div>
-                        <div class="profile-info">
-                            <h5>Dr. Shashikant Rai</h5>
-                            <span>Assistant Professor, Department of Management Studies, IIIT Allahabad<br>Coordinator</span>
-                        </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
+                <div class="profile-card-c">
+                    <div class="profile-img-container">
+                        <img src="https://ssbf.iiita.ac.in/./images/saurabhmishra.jpg" alt="Coordinator">
+                    </div>
+                    <div class="profile-info">
+                        <h5>Dr. Saurabh Mishra</h5>
+                        <span>Assistant Professor, Department of Management Studies, IIIT Allahabad</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
+                <div class="profile-card-c">
+                    <div class="profile-img-container">
+                        <img src="https://ssbf.iiita.ac.in/./images/shashikant-rai.jpg" alt="Coordinator">
+                    </div>
+                    <div class="profile-info">
+                        <h5>Dr. Shashikant Rai</h5>
+                        <span>Assistant Professor, Department of Management Studies, IIIT Allahabad</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="list-section">
-        <div class="container">
-            <!-- Organizing Committee Members -->
-            <div class="list-container mb-5">
-                <h2>Organizing Committee Members</h2>
-                <div class="list-items-grid">
-                    <div class="list-item">Dr. Jayashree Bhattacharjee, Symbiosis International University, Pune</div>
-                    <div class="list-item">Dr. Kajol, GSFC University, Vadodara</div>
-                    <div class="list-item">Dr. Suman Agarwal, Assam Royal Global University, Guwahati</div>
-                    <div class="list-item">Ms. Sahiba Khan, Research Scholar, IIITA</div>
-                    <div class="list-item">Mr. Lokendra Puri, Research Scholar, IIITA</div>
-                    <div class="list-item">Ms. Lata Pandey, Research Scholar, IIITA</div>
-                    <div class="list-item">Ms. Sakshi Pandey, Research Scholar, IIITA</div>
-                    <div class="list-item">Mr. Jatin Sethi, Research Scholar, IIITA</div>
-                    <div class="list-item">Mr. Rahul Yadav, Research Scholar, IIITA</div>
-                    <div class="list-item">Mr. Arpit Gupta, Research Scholar, IIITA</div>
-                </div>
+<div class="list-section">
+    <div class="container">
+        <div class="list-container mb-5">
+            <h2>Organizing Committee Members</h2>
+            <div class="list-items-grid">
+                <div class="list-item">Dr. Jayashree Bhattacharjee, Symbiosis International University, Pune</div>
+                <div class="list-item">Dr. Kajol, GSFC University, Vadodara</div>
+                <div class="list-item">Dr. Suman Agarwal, Assam Royal Global University, Guwahati</div>
+                <div class="list-item">Ms. Sahiba Khan, Research Scholar, IIITA</div>
+                <div class="list-item">Mr. Lokendra Puri, Research Scholar, IIITA</div>
+                <div class="list-item">Ms. Lata Pandey, Research Scholar, IIITA</div>
+                <div class="list-item">Ms. Sakshi Pandey, Research Scholar, IIITA</div>
+                <div class="list-item">Mr. Jatin Sethi, Research Scholar, IIITA</div>
+                <div class="list-item">Mr. Rahul Yadav, Research Scholar, IIITA</div>
+                <div class="list-item">Mr. Arpit Gupta, Research Scholar, IIITA</div>
             </div>
+        </div>
 
-            <!-- Advisors -->
-            <div class="list-container">
-                <h2>Advisors</h2>
-                <div class="list-items-grid">
-                    <div class="list-item">Prof. Amalesh Bhowal, Assam University, Diphu Campus</div>
-                    <div class="list-item">Prof. Neharika Vohra, IIM, Ahmedabad</div>
-                    <div class="list-item">Prof. Raj Kumar Singh, Banaras Hindu University</div>
-                    <div class="list-item">Prof. V. K. Shrotriya, Delhi School of Economics</div>
-                    <div class="list-item">Prof. Nageshwar Rao, Vice Chancellor, IGNOU</div>
-                    <div class="list-item">Prof. G. P. Prasain, Vice Chancellor, Tripura University</div>
-                    <div class="list-item">Prof. Madhumita Chakraborty, IIM, Lucknow</div>
-                    <div class="list-item">Prof. Neeraj Pandey, IIM, Mumbai</div>
-                    <div class="list-item">Prof. Sujit Deb, ICFAI University, Tripura</div>
-                    <div class="list-item">Dr. Ambrish Singh, Rajkeeya Engineering College, Azamgarh</div>
-                </div>
+        <div class="list-container">
+            <h2>Advisors</h2>
+            <div class="list-items-grid">
+                <div class="list-item">Prof. Amalesh Bhowal, Assam University, Diphu Campus</div>
+                <div class="list-item">Prof. Neharika Vohra, IIM, Ahmedabad</div>
+                <div class="list-item">Prof. Raj Kumar Singh, Banaras Hindu University</div>
+                <div class="list-item">Prof. V. K. Shrotriya, Delhi School of Economics</div>
+                <div class="list-item">Prof. Nageshwar Rao, Vice Chancellor, IGNOU</div>
+                <div class="list-item">Prof. G. P. Prasain, Vice Chancellor, Tripura University</div>
+                <div class="list-item">Prof. Madhumita Chakraborty, IIM, Lucknow</div>
+                <div class="list-item">Prof. Neeraj Pandey, IIM, Mumbai</div>
+                <div class="list-item">Prof. Sujit Deb, ICFAI University, Tripura</div>
+                <div class="list-item">Dr. Ambrish Singh, Rajkeeya Engineering College, Azamgarh</div>
             </div>
         </div>
     </div>
+</div>
+
     <!--Main Content Ends-->
 
     <!-- Footer -->
