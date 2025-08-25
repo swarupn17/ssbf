@@ -126,22 +126,56 @@
         box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
         border-color: rgba(255, 179, 0, 0.4);
       }
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;   /* center cards */
+  gap: 20px;                 /* space between cards */
+}
 
-      .profile-img-container img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid #ffb300;
-        box-shadow: 0 0 15px rgba(255, 179, 0, 0.3),
-          0 0 30px rgba(255, 179, 0, 0.2);
-        margin-bottom: 1.5rem;
-        transition: transform 0.3s ease;
-      }
+.profile-card-co {
+  background: rgba(30, 28, 58, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 179, 0, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-      .profile-card:hover .profile-img-container img {
-        transform: scale(1.05);
-      }
+  flex: 1 1 calc(33.33% - 40px); /* 3 per row with gap */
+  max-width: 350px;  
+  margin-left: 225px;
+  /* prevents overflow */
+}
+
+
+.profile-card-co:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+  border-color: rgba(255, 179, 0, 0.4);
+}
+
+.profile-img-container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffb300;
+  box-shadow: 
+    0 0 15px rgba(255, 179, 0, 0.3),
+    0 0 30px rgba(255, 179, 0, 0.2);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.profile-card-co:hover .profile-img-container img {
+  transform: scale(1.05);
+}
+
 
       .profile-info h5 {
         color: #ffffff;
@@ -204,192 +238,116 @@
         transform: scale(1.03);
         cursor: default;
       }
+      /* Update the Technical Committee Members section CSS */
+.list-section .list-items-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+.list-section .list-items-grid .col-lg-4 {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+    margin-bottom: 1rem;
+}
+
+.profile-card-co {
+    background: rgba(30, 28, 58, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 179, 0, 0.2);
+    border-radius: 20px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 220px; /* Fixed width for consistent sizing */
+    height: 320px; /* Fixed height for uniform cards */
+    margin: 0; /* Remove margin-left: 225px */
+}
+
+.profile-card-co:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+    border-color: rgba(255, 179, 0, 0.4);
+}
+
+.profile-card-co .profile-img-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffb300;
+    box-shadow: 
+        0 0 15px rgba(255, 179, 0, 0.3),
+        0 0 30px rgba(255, 179, 0, 0.2);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.profile-card-co:hover .profile-img-container img {
+    transform: scale(1.05);
+}
+
+.profile-card-co .profile-info h5 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-card-co .profile-info span {
+    color: #b0b0c0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1400px) {
+    .profile-card-co {
+        width: 200px;
+        height: 300px;
+    }
+    
+    .profile-card-co .profile-img-container img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .list-section .list-items-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .profile-card-co {
+        width: 180px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .list-section .list-items-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .profile-card-co {
+        width: 250px;
+        height: 320px;
+    }
+}
     </style>
   </head>
   <body data-spy="scroll" data-target=".fixed-top">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-<<<<<<< Updated upstream
-      <a
-        class="navbar-brand logo-image"
-        href="index.html"
-        style="
-          color: #ffb300;
-          font-size: 2em;
-          font-family: 'Acme', sans-serif;
-          text-decoration: none;
-        "
-      >
-        <img src="images/iiita.gif" class="main-logo" /><span> </span>IIIT
-        ALLAHABAD
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarsExampleDefault"
-        aria-controls="navbarsExampleDefault"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-awesome fas fa-bars"></span>
-        <span class="navbar-toggler-awesome fas fa-times"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="index.html">HOME</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle page-scroll"
-              href="#"
-              id="aboutDropdown"
-              role="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >ABOUT</a
-            >
-            <div class="dropdown-menu" aria-labelledby="aboutDropdown">
-              <a class="dropdown-item" href="ssbf.html">SSBF</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="iiita.html">IIITA</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="international-conference.html"
-                >International Conference</a
-              >
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="committee.html">Committee</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="speakers.html">Speakers</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle page-scroll"
-              href="#"
-              id="programDropdown"
-              role="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >PROGRAM</a
-            >
-            <div class="dropdown-menu" aria-labelledby="programDropdown">
-              <a class="dropdown-item" href="tutorials.html">Tutorials</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="panel-discussion.html"
-                >Panel Discussion</a
-              >
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="city-tour.html">City Tour</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle page-scroll"
-              href="#"
-              id="regDropdown"
-              role="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >REGISTRATION</a
-            >
-            <div class="dropdown-menu" aria-labelledby="regDropdown">
-              <a class="dropdown-item" href="fees.html">Fees</a>
-              <div class="dropdown-divider"></div>
-              <a
-                class="dropdown-item"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSezXlv9MHBZ9DfqydPA7_koqY_a55ErUieqXXDM-a3kILGsWw/viewform?usp=sf_link"
-              >
-                Register
-              </a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="publication.html"
-              >PAST PROCEEDINGS</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="gallery.html">Gallery</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle page-scroll"
-              href="#"
-              id="archiveDropdown"
-              role="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >ARCHIVE</a
-            >
-            <div class="dropdown-menu" aria-labelledby="archiveDropdown">
-              <a
-                class="dropdown-item"
-                href="./assets/2025-9.pdf"
-                target="_blank"
-                >2025</a
-              >
-              <div class="dropdown-divider"></div>
-              <a
-                class="dropdown-item"
-                href="./assets/2024-8.pdf"
-                target="_blank"
-                >2024</a
-              >
-              <div class="dropdown-divider"></div>
-              <a
-                class="dropdown-item"
-                href="./assets/2023-6.pdf"
-                target="_blank"
-                >2023</a
-              >
-              <div class="dropdown-divider"></div>
-              <a
-                class="dropdown-item"
-                href="./assets/2022-5.pdf"
-                target="_blank"
-                >2022</a
-              >
-              <div class="dropdown-divider"></div>
-              <a
-                class="dropdown-item"
-                href="./assets/2021-4.pdf"
-                target="_blank"
-                >2021</a
-              >
-              <div class="dropdown-divider"></div>
-              <a
-                class="dropdown-item"
-                href="./assets/2020-3.pdf"
-                target="_blank"
-                >2020</a
-              >
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="./assets/2019.pdf" target="_blank"
-                >2019</a
-              >
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="./assets/2018.pdf" target="_blank"
-                >2018</a
-              >
-            </div>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link page-scroll"
-              href="https://forms.gle/pBo5SKoucx4Hgaqt8"
-              >PAPER SUBMISSION</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="index.html#contact"
-              >CONTACT</a
-            >
-          </li>
-        </ul>
-      </div>
-=======
         <a class="navbar-brand logo-image" href="index.html"
             style="color:#FFB300; font-size:2em;font-family: 'Acme', sans-serif; text-decoration: none;">
             <img src="images/iiita.gif" class="main-logo"><span> </span>IIIT ALLAHABAD
@@ -470,7 +428,6 @@
                 <li class="nav-item"><a class="nav-link page-scroll" href="index.html#contact">CONTACT</a></li>
             </ul>
         </div>
->>>>>>> Stashed changes
     </nav>
     <!-- end of navbar -->
 
@@ -593,6 +550,163 @@
         </div>
       </div>
     </div>
+    <div class="list-section">
+      <div class="container">
+        <div class="list-container mb-5">
+          <h2>Organizing Committee Members</h2>
+          <div class="list-items-grid">
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4 ml-50">
+            <div class="profile-card-co">
+              <div class="profile-img-container">
+                <img
+                  src="images/jayashree.png"
+                  alt="Coordinator"
+                />
+              </div>
+              <div class="profile-info">
+                <h5>Dr. Jayashree Bhattacharjee</h5>
+                <span
+                  >Symbiosis International University,
+              Pune</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
+            <div class="profile-card-co">
+              <div class="profile-img-container">
+                <img
+                  src="images/kajol.png"
+                  alt="Coordinator"
+                />
+              </div>
+              <div class="profile-info">
+                <h5>Dr. Kajol</h5>
+                <span
+                  >GSFC University, Vadodara</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
+            <div class="profile-card-co">
+              <div class="profile-img-container">
+                <img
+                  src="images/suman.png"
+                  alt="Coordinator"
+                />
+              </div>
+              <div class="profile-info">
+                <h5>Dr. Suman Agarwal</h5>
+                <span
+                  >Assam Royal Global University, Guwahati</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
+            <div class="profile-card-co">
+              <div class="profile-img-container">
+                <img
+                  src="images/sahiba.png"
+                  alt="Coordinator"
+                />
+              </div>
+              <div class="profile-info">
+                <h5>Ms. Sahiba Khan</h5>
+                <span
+                  >Research Scholar, IIITA</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
+            <div class="profile-card-co">
+              <div class="profile-img-container">
+                <img
+                  src="images/puri.png"
+                  alt="Coordinator"
+                />
+              </div>
+              <div class="profile-info">
+                <h5>Mr. Lokendra Puri</h5>
+                <span
+                  >Research Scholar, IIITA</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
+            <div class="profile-card-co">
+              <div class="profile-img-container">
+                <img
+                  src="images/lata.png"
+                  alt="Coordinator"
+                />
+              </div>
+              <div class="profile-info">
+                <h5>Ms. Lata Pandey</h5>
+                <span
+                  >Research Scholar, IIITA</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
+            <div class="profile-card-co">
+              <div class="profile-img-container">
+                <img
+                  src="images/sakshi.png"
+                  alt="Coordinator"
+                />
+              </div>
+              <div class="profile-info">
+                <h5>Ms. Sakshi Pandey</h5>
+                <span
+                  >Research Scholar, IIITA</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
+            <div class="profile-card-co">
+              <div class="profile-img-container">
+                <img
+                  src="images/Rahul.png"
+                  alt="Coordinator"
+                />
+              </div>
+              <div class="profile-info">
+                <h5>Mr. Rahul Yadav</h5>
+                <span
+                  >Research Scholar, IIITA</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
+            <div class="profile-card-co">
+              <div class="profile-img-container">
+                <img
+                  src="images/arpit.png"
+                  alt="Coordinator"
+                />
+              </div>
+              <div class="profile-info">
+                <h5>Mr. Arpit Gupta</h5>
+                <span
+                  >Assistant Professor, Department of Management Studies, IIIT
+                  Allahabad</span
+                >
+              </div>
+            </div>
+          </div>
+            <div class="list-item">
+              Mr. Jatin Sethi, Research Scholar, IIITA
+            </div>
+          </div>
+        </div>
+
 
     <div class="list-section">
       <div class="container">
@@ -663,6 +777,97 @@
           </div>
         </div>
       </div>
+    </div>
+    <!-- Technical Committee -->
+    <div class="list-section">
+      <div class="container">
+        <div class="list-container mb-5">
+          <h2>Technical Committee Members</h2>
+          <div class="list-items-grid">
+            
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4 ml-50">
+                
+            <div class="profile-card-co">
+              <div class="profile-img-container">
+                <img
+                  src="images/swarup.png"
+                  alt="Coordinator"
+                />
+              </div>
+              <div class="profile-info">
+                <h5>Swarup Narkhede</h5>
+                <span
+                  >IIIT ALLAHABAD</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
+            
+            <div class="profile-card-co">
+              <div class="profile-img-container">
+                <img
+                  src="images/akansha.png"
+                  alt="Coordinator"
+                />
+              </div>
+              <div class="profile-info">
+                <h5>Akansha Mishra</h5>
+                <span
+                  >GSFC University, Vadodara</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
+            <div class="profile-card-co">
+              <div class="profile-img-container">
+                <img
+                  src="images/mokshe.png"
+                  alt="Coordinator"
+                />
+              </div>
+              <div class="profile-info">
+                <h5>Mokshe Jain</h5>
+                <span
+                  >IIIT ALLAHABAD</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
+            <div class="profile-card-co">
+              <div class="profile-img-container">
+                <img
+                  src="images/ashish.png"
+                  alt="Coordinator"
+                />
+              </div>
+              <div class="profile-info">
+                <h5>Ashish Ranjan</h5>
+                <span
+                  >IIIT ALLAHABAD</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
+            <div class="profile-card-co">
+              <div class="profile-img-container">
+                <img
+                  src=""
+                  alt="Coordinator"
+                />
+              </div>
+              <div class="profile-info">
+                <h5>Aashutosh Gupta</h5>
+                <span
+                  >IIIT ALLAHABAD</span
+                >
+              </div>
+            </div>
+          </div>
+          </div>
     </div>
 
     <!--Main Content Ends-->
